@@ -1,6 +1,6 @@
 //% block="Pedra, paper, tisores" color=#C247FF
 //% weight=102 icon="\uf257"
-namespace rps {
+namespace pps {
     export enum Hands {
         //% block="Pedra"
         Rock = ".....\n.###.\n.###.\n.###\n.....",
