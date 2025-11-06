@@ -15,9 +15,9 @@ namespace pps {
      */
     //% block="mostrar mà %hand" weight=0
     export function showHand(hand: Hands) {
-        if (hand === Hands.Rock) {
+        if (hand === pps.Hands.Rock) {
             basic.showLeds(".....\n.###.\n.###.\n.###.\n.....");
-        } else if (hand == Hands.Paper) {
+        } else if (hand == pps.Hands.Paper) {
             basic.showLeds(".###.\n.###.\n.###.\n.###.\n.###.");
         } else {
             basic.showIcon(IconNames.Scissors);
@@ -31,13 +31,12 @@ namespace pps {
      */
     //% block="iniciar joc" weight=2
     export function start(): void {
-        let hand: number = 0;
-        let cpu: number = 0;
+        let hand: pps.Hands = pps.Hands.Rock;
+        let cpu: pps.Hands;
         let wins: number = 0;
         let loses: number = 0;
         let draws: number = 0;
         let turn: boolean = true;
-        
         input.onButtonPressed(Button.A, (): void => {
             if (turn && !(wins + loses + draws === 6)) {
                 if (hand < 2) {
@@ -50,6 +49,7 @@ namespace pps {
         input.onButtonPressed(Button.B, (): void => {
             if (!(wins + loses + draws === 6)) {
                 turn = false;
+                cpu = randint(0, 2)
                 music.play(music.stringPlayable("c D E F", 120), music.PlaybackMode.UntilDone);
                 pps.showHand(cpu);
                 if (hand === cpu) {
