@@ -13,7 +13,7 @@ namespace pps {
      * Mostra una icona d'una mà, que pot ser de pedra, paper o tisores
      * @param hand mà a mostrar
      */
-    //% block="mostrar mà %hand" weight=0
+    //% block="mostrar mà %hand" weight=1
     export function showHand(hand: pps.Hands): void {
         if (hand === pps.Hands.Rock) {
             basic.showLeds(".....\n.###.\n.###.\n.###.\n.....");
@@ -23,6 +23,13 @@ namespace pps {
             basic.showIcon(IconNames.Scissors);
         }
     }
+    /**
+     * Inicia un joc de pedra, paper, tisores contra una altra micro:bit
+     * Pedra guanya a tisores, paper guanya a pedra i tisores guanyen a paper.
+     * Per seleccionar una mà, premi el botó A.
+     * Per acceptar la mà seleccionada, premi el botó B.
+     */
+    //% block="iniciar joc amb ràdio" weight=0 color=#E3008C
     export function startRadio(): void {
         let hand: pps.Hands = pps.Hands.Rock;
         let turn: boolean = true;
@@ -40,29 +47,23 @@ namespace pps {
             music.play(music.stringPlayable("c D E F", 120), music.PlaybackMode.UntilDone);
             pps.showHand(receivedNumber);
             turn = false;
-                cpu = randint(0, 2)
-                music.play(music.stringPlayable("c D E F", 120), music.PlaybackMode.UntilDone);
-                pps.showHand(cpu);
-                if (hand === receivedNumber) {
-                    basic.showLeds(".....\n.#.#.\n.....\n#####\n.....");
-                    draws++;
-                } else if ((hand + 1) % 3 === receivedNumber) {
-                    basic.showIcon(IconNames.Sad);
-                    loses++;
-                } else {
-                    basic.showIcon(IconNames.Happy);
-                    wins++;
-                }
+            if (hand === receivedNumber) {
+                basic.showLeds(".....\n.#.#.\n.....\n#####\n.....");
+            } else if ((hand + 1) % 3 === receivedNumber) {
+                basic.showIcon(IconNames.Sad);
+            } else {
+                basic.showIcon(IconNames.Happy);
+            }
             turn = true;
         });
         basic.forever(() => {
             if (turn) {
-                pps.show(hand);
+                pps.showHand(hand);
             }
         });
     }
     /**
-     * Inicia un joc de pedra, paper, tisores
+     * Inicia un joc de pedra, paper, tisoresn contra un ordinador
      * Pedra guanya a tisores, paper guanya a pedra i tisores guanyen a paper.
      * Per seleccionar una mà, premi el botó A.
      * Per acceptar la mà seleccionada, premi el botó B.
