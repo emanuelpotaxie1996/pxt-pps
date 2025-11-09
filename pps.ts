@@ -23,6 +23,44 @@ namespace pps {
             basic.showIcon(IconNames.Scissors);
         }
     }
+    export function startRadio(): void {
+        let hand: pps.Hands = pps.Hands.Rock;
+        let turn: boolean = true;
+        input.onButtonPressed(Button.A, (): void => {
+            if (turn) {
+                hand = (hand + 1) % 3;
+            }
+        });
+        input.onButtonPressed(Button.B, (): void => {
+            turn = false;
+            radio.sendNumber(hand);
+        });
+        radio.onReceivedNumber((receivedNumber: number): void => {
+            while (turn) {}
+            music.play(music.stringPlayable("c D E F", 120), music.PlaybackMode.UntilDone);
+            pps.showHand(receivedNumber);
+            turn = false;
+                cpu = randint(0, 2)
+                music.play(music.stringPlayable("c D E F", 120), music.PlaybackMode.UntilDone);
+                pps.showHand(cpu);
+                if (hand === receivedNumber) {
+                    basic.showLeds(".....\n.#.#.\n.....\n#####\n.....");
+                    draws++;
+                } else if ((hand + 1) % 3 === receivedNumber) {
+                    basic.showIcon(IconNames.Sad);
+                    loses++;
+                } else {
+                    basic.showIcon(IconNames.Happy);
+                    wins++;
+                }
+            turn = true;
+        });
+        basic.forever(() => {
+            if (turn) {
+                pps.show(hand);
+            }
+        });
+    }
     /**
      * Inicia un joc de pedra, paper, tisores
      * Pedra guanya a tisores, paper guanya a pedra i tisores guanyen a paper.
