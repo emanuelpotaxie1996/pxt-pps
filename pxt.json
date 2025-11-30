@@ -1,0 +1,24 @@
+{
+    "name": "Pedra, paper, tisores",
+    "description": "Jocs i funcions del joc «pedra, paper, tisores» per MakeCode",
+    "version": "1.0.0",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*",
+        "radio": "*"
+    },
+    "files": [
+        "pps.ts",
+        "README.md",
+        "_locales/es-ES/pps-strings.json",
+        "_locales/es-ES/pps-jsdoc-strings.json",
+        "_locales/en/pps-strings.json"
+    ],
+    "supportedTargets": [
+        "microbit"
+    ],
+    "targetVersions": {
+        "target": "8.1.6",
+        "pxt": "12.2.9"
+    }
+}
