@@ -20,5 +20,6 @@
     "targetVersions": {
         "target": "8.1.6",
         "pxt": "12.2.9"
-    }
+    },
+    "public": true
 }
