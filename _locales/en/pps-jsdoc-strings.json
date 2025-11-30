@@ -1,0 +1,7 @@
+{
+    "Hands": "Hands type",
+    "pps.start": "Starts a rock paper scissors game against AI\nRock beats scissors, paper beats rock and scissors beat paper.\nPress button A for selecting a hand.\nPress button B for accepting a selected hand.",
+    "pps.startRadio": "Starts a rock paper scissors game against another micro:bit\nRock beats scissors, paper beats rock and scissors beat paper.\nPress button A for selecting a hand.\nPress button B for accepting a selected hand.",
+    "pps.showHand": "Shows the icon of a hand, wich can be a rock, a paper or scissors",
+    "pps.showHand|param|hand": "hand to show"
+}
