@@ -13,7 +13,7 @@ namespace pps {
      * Mostra una icona d'una mà, que pot ser de pedra, paper o tisores
      * @param hand mà a mostrar
      */
-    //% block="mostrar mà %hand" weight=0
+    //% block="mostrar mà de %hand" weight=0
     export function showHand(hand: Hands): void {
         if (hand === Hands.Rock) {
             basic.showLeds(".....\n.###.\n.###.\n.###.\n.....");
