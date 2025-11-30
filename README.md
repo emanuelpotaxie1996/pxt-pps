@@ -6,8 +6,8 @@ També afegeix una funció anomenada «mostrar mà» `pps.showHand` que mostra l
 
 ---
 
-# Jan-ken-pon
+# Piedra, papel o tijera
 
-Esta extensión para MakeCode añade dos juegos de «jan-ken-pon». En uno, juega contra una inteligencia artificial que hace movimientos al azar `pps.start`. En el otro, juega contra otra micro:bit con el mismo grupo de radio que usted `pps.startRadio`.
+Esta extensión para MakeCode añade dos juegos de «piedra, papel o tijera». En uno, juega contra una inteligencia artificial que hace movimientos al azar `pps.start`. En el otro, juega contra otra micro:bit con el mismo grupo de radio que usted `pps.startRadio`.
 Si juega con radio, asegúrese de que usted y la otra persona tengan el mismo grupo de radio y no estén demasiado lejos el uno del otro.
 También añade una función llamada «mostrar mano» `pps.showHand` que muestra la mano que le diga. Esta mano puede ser una piedra `Hands.Rock`, un papel `Hands.Paper` o unas tijeras `Hands.Scissors`.
