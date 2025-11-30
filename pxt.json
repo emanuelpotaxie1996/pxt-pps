@@ -1,7 +1,7 @@
 {
     "name": "Pedra, paper, tisores",
     "description": "Jocs i funcions del joc «pedra, paper, tisores» per MakeCode",
-    "version": "1.8.1",
+    "version": "1.8.2",
     "license": "MIT",
     "dependencies": {
         "core": "*",
