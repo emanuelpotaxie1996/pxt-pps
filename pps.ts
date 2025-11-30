@@ -13,7 +13,7 @@ enum Hands {
 //% weight=102 icon="\uf257"
 namespace pps {
     /**
-     * Mostra una icona d'una mà, que pot ser de pedra, paper o tisores
+     * Mostra la icona d'una mà, que pot ser de pedra, paper o tisores
      * @param hand mà a mostrar
      */
     //% block="mostrar mà de %hand" weight=0
