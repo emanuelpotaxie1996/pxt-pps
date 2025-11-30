@@ -1,5 +1,7 @@
 {
     "Hands": "El tipo Hands",
     "pps.start": "Inicia un juego de piedra, papel o tijera contra un ordenador\nPiedra gana a tijeras, papel gana a piedra y tijeras ganan a papel.\nPara seleccionar una mano, presione el botón A.\nPara aceptar la mano seleccionada, presione el botón B",
-    "pps.startRadio": "Inicia un juego de piedra, papel o tijera contra otra micro:bit\nInicia un juego de piedra, papel o tijera contra un ordenador\nPiedra gana a tijeras, papel gana a piedra y tijeras ganan a papel.\nPara seleccionar una mano, presione el botón A.\nPara aceptar la mano seleccionada, presione el botón B"
+    "pps.startRadio": "Inicia un juego de piedra, papel o tijera contra otra micro:bit\nInicia un juego de piedra, papel o tijera contra un ordenador\nPiedra gana a tijeras, papel gana a piedra y tijeras ganan a papel.\nPara seleccionar una mano, presione el botón A.\nPara aceptar la mano seleccionada, presione el botón B",
+    "pps.showHand": "Muestra el ícono de una mano, que puede ser de piedra, papel o tijeras",
+    "pps.showHand|param|hand": "mano a mostrar"
 }
